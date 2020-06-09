@@ -1,7 +1,8 @@
 const jwt = require('jsonwebtoken')
 const User = require('../models/user')
 const config = require('config');
-const SECRET_OR_PUBLIC_KEY = config.get('SECRET_OR_PUBLIC_KEY');
+// const SECRET_OR_PUBLIC_KEY = config.get('SECRET_OR_PUBLIC_KEY');
+const SECRET_OR_PUBLIC_KEY =  process.env.SECRET_OR_PUBLIC_KEY;
 
 const auth = async (req, res, next) => {
     try {
